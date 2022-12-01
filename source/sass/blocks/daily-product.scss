@@ -1,0 +1,70 @@
+.daily-product {
+  padding: 31px 30px 42px;
+}
+
+.daily-product__title {
+  position: relative;
+  margin: 0 0 41px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.daily-product__promo-text {
+  position: absolute;
+  left: 0;
+  bottom: -23.5px;
+  font-size: $fz-default;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-downy;
+}
+
+.daily-product__description {
+  margin-bottom: 41px;
+}
+
+.daily-product__text-description {
+  margin: 0 0 28px;
+  font-size: 15px;
+  color: $color-charcoal;
+}
+
+.daily-product__list {
+  margin: 0;
+  font-size: 15px;
+  line-height: 20px;
+  color: $color-charcoal;
+}
+
+.daily-product__item {
+  padding: 8px 0 12px;
+  display: grid;
+  grid-template-columns: 97px auto;
+  border-bottom: 1px solid $color-whisper;
+}
+
+.daily-product__name {
+
+}
+
+.daily-product__value {
+  margin: 0;
+}
+
+.daily-product__img {
+  margin-bottom: 25.5px;
+}
+
+.daily-product__price {
+  display: block;
+  margin-bottom: 24.5px;
+  font-weight: 700;
+  color: $color-charcoal;
+  text-align: center;
+}
+
+.daily-product__button {
+  min-width: 260px;
+}
