@@ -1,0 +1,25 @@
+.production {
+  padding: 21px 30px 33px;
+  border-top: 1px solid $color-whisper;
+  border-bottom: 1px solid $color-whisper;
+  display: grid;
+  grid-template-rows: min-content 150px auto min-content;
+}
+
+.production__title {
+  margin: 0;
+  padding: 0 13px 0 91px;
+  font-size: $fz-default;
+  line-height: 24px;
+}
+
+.production__text {
+  padding: 35px 0 41px 34px;
+  font-size: 13px;
+  color: $color-charcoal;
+}
+
+.production__link {
+  width: 192px;
+  justify-self: center;
+}

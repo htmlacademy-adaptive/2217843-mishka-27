@@ -1,0 +1,10 @@
+.cart {
+  padding: 28.5px 0 26.5px;
+  border-bottom: none;
+  display: grid;
+  grid-template-columns: 76px 1fr;
+}
+
+.cart__icon {
+  grid-column: 1 / 2;
+}

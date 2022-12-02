@@ -1,1 +1,22 @@
-// Начните писать стили здесь
+@import "global/variables";
+@import "vendor/normalize";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "blocks/button";
+@import "blocks/main-header";
+@import "blocks/main-nav";
+@import "blocks/search";
+@import "blocks/cart";
+@import "blocks/hero";
+@import "blocks/daily-product";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/contacts";
+@import "blocks/main-footer";
+@import "blocks/social";
+@import "blocks/intro";
+@import "blocks/order-form";
+@import "blocks/catalog";
+@import "blocks/product-card";
+@import "blocks/production";

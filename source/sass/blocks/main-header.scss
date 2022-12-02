@@ -1,0 +1,29 @@
+.main-header {
+  position: relative;
+  min-height: 79px;
+  padding: 22px 30px;
+}
+
+.main-header__logo {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-header__button {
+  display: block;
+  margin: 10px 0 0 auto;
+  width: 21px;
+  height: 20px;
+}
+
+.main-header__navigation {
+  display: none;
+}
+
+.main-header__text {
+  font-size: 15px;
+  color: $color-charcoal;
+  display: none;
+}
