@@ -1,7 +1,3 @@
-.main-nav {
-
-}
-
 .main-nav__list {
   margin: 0;
   padding: 0;
@@ -13,7 +9,6 @@
 }
 
 .main-nav__item {
-
   &--primary {
     display: grid;
     grid-template-columns: 76px 1fr;
@@ -35,4 +30,3 @@
     font-size: 15px;
   }
 }
-
