@@ -1,16 +1,18 @@
 .button {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 16px;
+  align-items: center;
   min-width: 175px;
-  font-family: inherit;
+  padding: 16px;
+
+  font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  font-weight: 700;
+  font-family: inherit;
   text-align: center;
-  text-transform: uppercase;
   color: $color-charcoal;
+  text-transform: uppercase;
+
   background-color: $color-transparent;
   border: 2px solid $color-charcoal;
 }

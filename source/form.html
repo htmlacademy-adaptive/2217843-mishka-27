@@ -17,42 +17,43 @@
       <span class="visually-hidden">Переход на главную страницу.</span>
     </a>
 
-    <button class="main-header__button main-header__button--closed" type="button">
+    <button class="main-header__button" type="button">
       <span class="visually-hidden">Открыть меню.</span>
     </button>
 
-    <!--Для открытия меню на main-header__nav нужно добавить модификатор --is-open-->
+    <!--Для открытия навигации на  main-header__navigation необходимо добавить модификатор --is-open-->
+
     <nav class="main-header__navigation main-nav">
-      <ul class="main-nav__list main-nav__list--primary">
-        <li class="main-nav__item main-nav__item--primary">
-          <a class="main-nav__link main-nav__link--primary" href="catalog.html">Каталог товаров</a>
+      <ul class="main-nav__list main-nav__list--pages">
+        <li class="main-nav__item main-nav__item--pages main-nav__item--odd">
+          <a class="main-nav__link main-nav__link--pages" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="main-nav__item main-nav__item--primary">
-          <span class="main-nav__link main-nav__link--primary">Вязание на заказ</span>
-        </li>
-      </ul>
-
-      <ul class="main-nav__list main-nav__list--secondary">
-        <li class="main-nav__item main-nav__item--secondary">
-          <a class="main-nav__link main-nav__link--secondary search" href="#">
-            <svg class="search__icon" width="18" height="18"></svg>
-            <span class="search__text">Поиск по сайту</span>
-          </a>
-        </li>
-        <li class="main-nav__item main-nav__item--secondary">
-          <a class="main-nav__link main-nav__link--secondary cart" href="#">
-            <svg class="cart__icon" width="21" height="18"></svg>
-            <span class="cart__text">Корзина: пока пуста</span>
-          </a>
+        <li class="main-nav__item main-nav__item--pages">
+          <span class="main-nav__link main-nav__link--pages">Вязание на заказ</span>
         </li>
       </ul>
 
-      <ul class="main-nav__list main-nav__list--tertiary">
-        <li class="main-nav__item main-nav__item--tertiary">
-          <a class="main-nav__link main-nav__link--tertiary" href="#">Новые поступления</a>
+      <ul class="main-nav__list user-menu">
+        <li class="user-menu__item user-menu__item--search">
+          <a class="user-menu__link" href="#">
+            <svg class="user-menu__icon" width="18" height="18"></svg>
+            <span class="user-menu__text user-menu__text--search">Поиск по сайту</span>
+          </a>
         </li>
-        <li class="main-nav__item main-nav__item--tertiary">
-          <a class="main-nav__link main-nav__link--tertiary" href="#">Распродажа</a>
+        <li class="user-menu__item user-menu__item--cart">
+          <a class="user-menu__link" href="#">
+            <svg class="user-menu__icon user-menu__icon--cart" width="21" height="18"></svg>
+            <span class="user-menu__text">Корзина: пока пуста</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="main-nav__list main-nav__list--extras">
+        <li class="main-nav__item main-nav__item--extras">
+          <a class="main-nav__link main-nav__link--extras" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item main-nav__item--extras">
+          <a class="main-nav__link main-nav__link--extras" href="#">Распродажа</a>
         </li>
       </ul>
     </nav>
@@ -61,8 +62,6 @@
   </header>
 
   <main class="main-form">
-  <div class="main-form__container">
-
     <section class="intro">
       <h1 class="intro__title">Вязание на заказ</h1>
     </section>
@@ -79,59 +78,59 @@
             <li class="order-form__item order-form__item--radio">
               <label class="order-form__control">
                 <input class="visually-hidden order-form__control-input order-form__control-input--radio" type="radio" name="product-type" value="interior-accessory" checked>
-                <span class="order-form__control-mark"></span>
+                <span class="order-form__control-mark order-form__control-mark--radio"></span>
                 <span class="order-form__control-label">Аксессуар для интерьера</span>
               </label>
             </li>
             <li class="order-form__item order-form__item--radio">
               <label class="order-form__control">
                 <input class="visually-hidden order-form__control-input order-form__control-input--radio" type="radio" name="product-type" value="baby-toy">
-                <span class="order-form__control-mark"></span>
+                <span class="order-form__control-mark order-form__control-mark--radio"></span>
                 <span class="order-form__control-label">Детская игрушка</span>
               </label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="order-form__fieldset">
+        <fieldset class="order-form__fieldset order-form__fieldset--color">
           <legend class="order-form__title">Цвет:</legend>
-          <ul class="order-form__list">
-            <li class="order-form__item">
+          <ul class="order-form__list order-form__list--checkbox">
+            <li class="order-form__item order-form__item--checkbox">
               <label class="order-form__control">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="white" checked>
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Белый</span>
               </label>
             </li>
-            <li class="order-form__item">
+            <li class="order-form__item order-form__item--checkbox">
               <label class="order-form__control">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="grey" checked>
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Серый</span>
               </label>
             </li>
-            <li class="order-form__item">
+            <li class="order-form__item order-form__item--checkbox">
               <label class="order-form__control">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="tiffany">
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Тиффани</span>
               </label>
             </li>
-            <li class="order-form__item">
+            <li class="order-form__item order-form__item--checkbox">
               <label class="order-form__control">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="black">
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Черный</span>
               </label>
             </li>
-            <li class="order-form__item">
+            <li class="order-form__item order-form__item--checkbox">
               <label class="order-form__control">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="pink">
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Розовый</span>
               </label>
             </li>
-            <li class="order-form__item">
+            <li class="order-form__item order-form__item--checkbox">
               <label class="order-form__control">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="orange">
                 <span class="order-form__control-mark"></span>
@@ -143,13 +142,16 @@
 
         <fieldset class="order-form__fieldset order-form__fieldset--fio">
           <legend class="order-form__title order-form__title--fio">ФИО</legend>
-          <label class="order-form__label">Имя:
+          <label class="order-form__label">
+            <span class="order-form__label-text">Имя:</span>
             <input class="order-form__field" type="text" name="client-name" placeholder="Введите ваше имя*" required>
           </label>
-          <label class="order-form__label">Фамилия:
+          <label class="order-form__label">
+            <span class="order-form__label-text">Фамилия:</span>
             <input class="order-form__field" type="text" name="client-surname" placeholder="Укажите фамилию*" required>
           </label>
-          <label class="order-form__label">Отчество:
+          <label class="order-form__label">
+            <span class="order-form__label-text">Отчество:</span>
             <input class="order-form__field" type="text" name="client-patronymic" placeholder="Отчество, если желаете">
           </label>
         </fieldset>
@@ -176,28 +178,42 @@
       </form>
     </section>
 
-  </div>
-</main>
-  <footer class="main-footer">
-  <div class="main-footer__container">
-    <div class="main-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">YouTube</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Telegram</a>
-        </li>
-      </ul>
-    </div>
 
-    <div class="main-footer__copyright">
-      <span class="main-footer__copyright-text">Разработано</span>
-      <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive/">HTML Academy</a>
-    </div>
+</main>
+<footer class="main-footer">
+  <a class="main-footer__logo" href="index.html">
+    <svg class="main-footer__logo-image" width="102" height="34"></svg>
+    <span class="visually-hidden">Переход на главную страницу интернет-магазина Мишка.</span>
+  </a>
+
+  <div class="main-footer__social social">
+    <ul class="social__list">
+      <li class="social__item social__item--vkontakte">
+        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+          <svg class="social__icon" width="27" height="17"></svg>
+          <span class="visually-hidden">ВКонтакте.</span>
+        </a>
+      </li>
+      <li class="social__item social__item--youtube">
+        <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+          <svg class="social__icon" width="24" height="19"></svg>
+          <span class="visually-hidden">YouTube.</span>
+        </a>
+      </li>
+      <li class="social__item social__item--telegram">
+        <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+          <svg class="social__icon" width="20" height="17"></svg>
+          <span class="visually-hidden">Telegram.</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main-footer__copyright">
+    <span class="main-footer__copyright-text">Разработано</span>
+    <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive/">
+      <svg class="main-footer__copyright-svg" width="27" height="34" aria-label="HTML Academy."></svg>
+    </a>
   </div>
 </footer>
   </div>

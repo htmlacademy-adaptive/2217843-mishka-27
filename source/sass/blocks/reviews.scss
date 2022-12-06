@@ -1,17 +1,45 @@
 .reviews {
-  padding: 28px 30px 51px;
+  position: relative;
+
+  padding: 28px 30px 45px 30px;
+
+  @include vp-768 {
+    padding: 83px 50px 68px 50px;
+  }
+
+  @include vp-1150 {
+    padding: 78px 50px 67px 225px;
+  }
 }
 
-
 .reviews__title {
-  margin: 0 0 14px;
+  margin: 0 0 14px 0;
+
+  font-weight: 700;
   font-size: 25px;
   line-height: 30px;
-  font-weight: 700;
+
+  @include vp-768 {
+    margin-bottom: 39px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include vp-1150 {
+    margin-bottom: 35px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .reviews__list {
   margin-bottom: 33px;
+
+  @include vp-768 {
+    margin-bottom: 0;
+  }
 }
 
 .reviews__item {
@@ -19,40 +47,93 @@
 }
 
 .reviews__text {
-  margin: 0 0 33px;
+  margin: 0 0 33px 0;
+
   font-size: 15px;
   line-height: 30px;
   color: $color-charcoal;
+
+  @include vp-768 {
+    margin-bottom: 61px;
+
+    font-size: 17px;
+  }
+
+  @include vp-1150 {
+    margin-bottom: 44px;
+  }
+}
+
+.reviews__author-info {
+  @include vp-768 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .reviews__author-name {
   font-weight: 700;
+  line-height: 30px;
+
+  @include vp-768 {
+    font-size: 18px;
+  }
+
+  @include vp-1150 {
+    font-size: 17px;
+  }
 }
 
 .reviews__author-contacts {
   font-style: normal;
-  line-height: 30px;
   color: $color-charcoal;
 }
 
 .reveiws__buttons-wrapper {
-  margin: 0 0 38px;
-  border: 1px solid $color-whisper;
   display: flex;
+  margin: 0 0 38px 0;
+
+  border: 1px solid $color-whisper;
+
+  @include vp-768 {
+    position: absolute;
+    right: 50px;
+    bottom: 47px;
+
+    border-color: none;
+  }
 }
 
 .reviews__button {
   width: 128px;
   height: 52px;
   padding: 13px 42px 13px 38px;
+
   background-color: $color-transparent;
   border: none;
 
+  @include vp-768 {
+    width: 86px;
+    padding: 13px 18px;
+  }
+
   &--previous {
     border-right: 1px solid $color-whisper;
+
+    @include vp-768 {
+      border: none;
+    }
   }
 }
 
 .reviews__write {
-  min-width: 260px;
+  width: 260px;
+
+  @include vp-768 {
+    position: absolute;
+    top: 77px;
+    right: 50px;
+
+    width: 175px;
+  }
 }

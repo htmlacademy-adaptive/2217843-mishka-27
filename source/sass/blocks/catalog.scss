@@ -1,13 +1,42 @@
 .catalog {
   padding: 30px;
+
+  @include vp-768 {
+    padding: 67px 50px 53px 50px;
+  }
+
+  @include vp-1150 {
+    padding: 111px 50px 57px 50px;
+  }
 }
 
 .catalog__list {
   margin: 0;
   padding: 0;
+
   list-style-type: none;
+
+  @include vp-1150 {
+    display: grid;
+    justify-content: space-between;
+
+    grid-template-columns: repeat(3, 316px);
+    row-gap: 50px;
+  }
 }
 
 .catalog__item {
   margin-bottom: 30px;
+
+  @include vp-768 {
+    margin-bottom: 54px;
+  }
+
+  @include vp-1150 {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

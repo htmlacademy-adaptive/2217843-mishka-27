@@ -1,48 +1,123 @@
 .daily-product {
-  padding: 31px 30px 42px;
+  position: relative;
+
+  padding: 31px 30px 36px 30px;
+
+  @include vp-768 {
+    padding: 40px 50px 52px 50px;
+  }
+
+  @include vp-1150 {
+    padding: 54px 50px 73px 50px;
+  }
 }
 
 .daily-product__title {
-  position: relative;
-  margin: 0 0 41px;
+  margin: 0 0 41px 0;
+
+  font-weight: 700;
   font-size: 25px;
   line-height: 30px;
-  font-weight: 700;
+
+  @include vp-768 {
+    margin-bottom: 38px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include vp-1150 {
+    position: absolute;
+    top: 115px;
+    left: 225px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .daily-product__promo-text {
   position: absolute;
-  left: 0;
-  bottom: -23.5px;
+  top: 64px;
+  left: 30px;
+
+  font-weight: 700;
   font-size: $fz-default;
   line-height: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
   color: $color-downy;
+  text-transform: uppercase;
+
+  @include vp-768 {
+    top: 46px;
+    right: 63px;
+    left: 605px;
+
+    line-height: 17px;
+  }
+
+  @include vp-1150 {
+    top: 123px;
+    right: 968px;
+    left: 82px;
+  }
+}
+
+.daily-product__card {
+  @include vp-768 {
+    display: grid;
+
+    column-gap: 42px;
+
+    grid-template-columns: 292px auto;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  @include vp-1150 {
+    margin-left: 175px;
+  }
 }
 
 .daily-product__description {
-  margin-bottom: 41px;
+  margin-bottom: 28px;
+
+  @include vp-768 {
+    margin-bottom: 57px;
+  }
+
+  @include vp-1150 {
+    margin-top: 154px;
+  }
 }
 
 .daily-product__text-description {
-  margin: 0 0 28px;
+  margin: 0 0 28px 0;
+
   font-size: 15px;
   color: $color-charcoal;
+
+  @include vp-768 {
+    margin-bottom: 48px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .daily-product__list {
   margin: 0;
+
   font-size: 15px;
   line-height: 20px;
   color: $color-charcoal;
 }
 
 .daily-product__item {
-  padding: 8px 0 12px;
   display: grid;
-  grid-template-columns: 97px auto;
+  padding: 8px 0 12px 0;
+
   border-bottom: 1px solid $color-whisper;
+
+  grid-template-columns: 97px auto;
 }
 
 .daily-product__value {
@@ -50,17 +125,35 @@
 }
 
 .daily-product__img {
-  margin-bottom: 25.5px;
+  margin-bottom: 26px;
+
+  @include vp-768 {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
 }
 
 .daily-product__price {
   display: block;
-  margin-bottom: 24.5px;
+  margin-bottom: 25px;
+
   font-weight: 700;
-  color: $color-charcoal;
   text-align: center;
+  color: $color-charcoal;
+
+  @include vp-768 {
+    margin-bottom: 33px;
+
+    font-size: 20px;
+  }
 }
 
 .daily-product__button {
   min-width: 260px;
+
+  @include vp-768 {
+    min-width: 292px;
+
+    font-size: 17px;
+  }
 }

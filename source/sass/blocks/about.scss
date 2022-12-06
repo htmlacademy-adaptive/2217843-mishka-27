@@ -1,24 +1,70 @@
 .about {
-  padding: 31px 30px 30px;
+  padding: 31px 30px 30px 30px;
+
+  @include vp-768 {
+    padding: 56px 50px 83px 50px;
+  }
+
+  @include vp-1150 {
+    padding: 68px 242px 90px 225px;
+  }
 }
 
 .about__title {
-  margin: 0 0 28px;
+  margin: 0 0 28px 0;
+
+  font-weight: 700;
   font-size: 25px;
   line-height: 30px;
-  font-weight: 700;
+
+  @include vp-768 {
+    margin-bottom: 42px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include vp-1150 {
+    margin-bottom: 39px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .about__list {
   margin: 0;
   padding: 0;
+
   list-style-type: none;
-  line-height: 20px;
   font-weight: 700;
+  line-height: 20px;
+
+  @include vp-768 {
+    display: grid;
+
+    font-size: 20px;
+    line-height: 22px;
+    column-gap: 70px;
+
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
 .about__item {
-  padding: 54px 0 30px;
+  padding: 54px 0 30px 0;
+
+  @include vp-768 {
+    padding: 56px 0 57px 0;
+
+    &:nth-last-child(2) {
+      padding-bottom: 0;
+    }
+  }
+
+  @include vp-1150 {
+    padding-top: 51px;
+  }
 
   &:last-child {
     padding-bottom: 0;
