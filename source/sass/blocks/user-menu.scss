@@ -2,7 +2,7 @@
   @include vp-768 {
     display: flex;
 
-    grid-column: 2 / -1;
+    grid-column: 2/-1;
     justify-self: end;
   }
 }

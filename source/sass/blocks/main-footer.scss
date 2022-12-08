@@ -1,9 +1,11 @@
 .main-footer {
+  background-color: $color-white-smoke;
+}
+
+.main-footer__container {
   position: relative;
 
   padding: 25px 30px 23px 30px;
-
-  background-color: $color-white-smoke;
 
   @include vp-768 {
     display: flex;

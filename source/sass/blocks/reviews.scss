@@ -1,14 +1,24 @@
 .reviews {
   position: relative;
 
+  display: grid;
   padding: 28px 30px 45px 30px;
 
   @include vp-768 {
     padding: 83px 50px 68px 50px;
+
+    background-image: url("../img/background/review.png");
+    background-repeat: no-repeat;
+    background-position: top left -50px;
+    background-size: contain;
+
+    grid-template-columns: auto 175px;
   }
 
   @include vp-1150 {
     padding: 78px 50px 67px 225px;
+
+    background-position: top left 50px;
   }
 }
 
@@ -39,6 +49,8 @@
 
   @include vp-768 {
     margin-bottom: 0;
+
+    grid-column: 1/-1;
   }
 }
 
@@ -95,10 +107,12 @@
 
   border: 1px solid $color-whisper;
 
+  justify-self: end;
+
   @include vp-768 {
     position: absolute;
     right: 50px;
-    bottom: 47px;
+    bottom: 30px;
 
     border-color: none;
   }
@@ -127,13 +141,12 @@
 }
 
 .reviews__write {
-  width: 260px;
-
   @include vp-768 {
-    position: absolute;
-    top: 77px;
-    right: 50px;
+    align-self: start;
 
-    width: 175px;
+    font-size: 17px;
+
+    grid-column: -2/-1;
+    grid-row: 1/2;
   }
 }

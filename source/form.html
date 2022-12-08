@@ -10,7 +10,7 @@
 <body>
   <div class="page-wrapper">
 
-  <header class="main-header">
+  <header class="main-header container">
 
     <a class="main-header__logo" href="index.html">
       <img src="img/svg/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
@@ -63,10 +63,12 @@
 
   <main class="main-form">
     <section class="intro">
+      <div class="intro__container container">
       <h1 class="intro__title">Вязание на заказ</h1>
+      </div>
     </section>
 
-    <section class="order-form">
+    <section class="order-form container">
       <h2 class="visually-hidden">Форма заказа.</h2>
       <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
@@ -93,6 +95,7 @@
         </fieldset>
 
         <fieldset class="order-form__fieldset order-form__fieldset--color">
+
           <legend class="order-form__title">Цвет:</legend>
           <ul class="order-form__list order-form__list--checkbox">
             <li class="order-form__item order-form__item--checkbox">
@@ -138,6 +141,7 @@
               </label>
             </li>
           </ul>
+
         </fieldset>
 
         <fieldset class="order-form__fieldset order-form__fieldset--fio">
@@ -186,36 +190,44 @@
     <span class="visually-hidden">Переход на главную страницу интернет-магазина Мишка.</span>
   </a>
 
-  <div class="main-footer__social social">
-    <ul class="social__list">
-      <li class="social__item social__item--vkontakte">
-        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-          <svg class="social__icon" width="27" height="17"></svg>
-          <span class="visually-hidden">ВКонтакте.</span>
-        </a>
-      </li>
-      <li class="social__item social__item--youtube">
-        <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-          <svg class="social__icon" width="24" height="19"></svg>
-          <span class="visually-hidden">YouTube.</span>
-        </a>
-      </li>
-      <li class="social__item social__item--telegram">
-        <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-          <svg class="social__icon" width="20" height="17"></svg>
-          <span class="visually-hidden">Telegram.</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="main-footer__copyright">
-    <span class="main-footer__copyright-text">Разработано</span>
-    <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive/">
-      <svg class="main-footer__copyright-svg" width="27" height="34" aria-label="HTML Academy."></svg>
+  <footer class="main-footer">
+    <div class="main-footer__container container">
+    <a class="main-footer__logo" href="index.html">
+      <svg class="main-footer__logo-image" width="102" height="34"></svg>
+      <span class="visually-hidden">Переход на главную страницу интернет-магазина Мишка.</span>
     </a>
-  </div>
-</footer>
+
+    <div class="main-footer__social social">
+      <ul class="social__list">
+        <li class="social__item social__item--vkontakte">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <svg class="social__icon" width="27" height="17"></svg>
+            <span class="visually-hidden">ВКонтакте.</span>
+          </a>
+        </li>
+        <li class="social__item social__item--youtube">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <svg class="social__icon" width="24" height="19"></svg>
+            <span class="visually-hidden">YouTube.</span>
+          </a>
+        </li>
+        <li class="social__item social__item--telegram">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <svg class="social__icon" width="20" height="17"></svg>
+            <span class="visually-hidden">Telegram.</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-footer__copyright">
+      <span class="main-footer__copyright-text">Разработано</span>
+      <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive/">
+        <svg class="main-footer__copyright-svg" width="27" height="34" aria-label="HTML Academy."></svg>
+      </a>
+    </div>
+    </div>
+  </footer>
   </div>
 </body>
 </html>

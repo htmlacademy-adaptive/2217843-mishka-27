@@ -1,9 +1,9 @@
 .main-header {
   position: relative;
+  z-index: 1;
 
   width: 100%;
   min-height: 79px;
-  z-index: 1;
 
   @include vp-768 {
     min-height: 88px;
@@ -27,6 +27,7 @@
   position: absolute;
   top: 22px;
   left: 50%;
+  z-index: 2;
 
   transform: translateX(-50%);
 

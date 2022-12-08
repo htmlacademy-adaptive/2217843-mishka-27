@@ -39,10 +39,9 @@
   list-style-type: none;
   font-weight: 700;
   line-height: 20px;
+  display: grid;
 
   @include vp-768 {
-    display: grid;
-
     font-size: 20px;
     line-height: 22px;
     column-gap: 70px;

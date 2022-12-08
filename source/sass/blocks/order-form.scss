@@ -39,6 +39,22 @@
   border: none;
   border-top: 1px solid $color-downy-tertiary;
 
+  &--fio {
+    margin-bottom: 42px;
+  }
+
+  &--tel {
+    margin-bottom: 42px;
+  }
+
+  &--email {
+    margin-bottom: 0;
+  }
+
+  &--textarea {
+    margin-bottom: 63px;
+  }
+
   @include vp-768 {
     display: grid;
     margin-bottom: 67px;
@@ -55,33 +71,31 @@
 
     grid-template-columns: 128px auto;
   }
+}
 
-  &--color {
-    @include vp-768 {
-      padding: 65px 50px 69px 50px;
+.order-form__fieldset--color {
+  @include vp-768 {
+    position: relative;
+
+    padding: 65px 50px 69px 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+
+      width: 100vw;
+      height: 100%;
 
       background-color: $color-white-smoke;
-    }
-
-    @include vp-1150 {
-      padding: 68px 100px 67px 97px;
+      transform: translate(-50%, -50%);
     }
   }
 
-  &--fio {
-    margin-bottom: 42px;
-  }
-
-  &--tel {
-    margin-bottom: 42px;
-  }
-
-  &--email {
-    margin-bottom: 0;
-  }
-
-  &--textarea {
-    margin-bottom: 63px;
+  @include vp-1150 {
+    padding: 68px 100px 67px 97px;
   }
 }
 
@@ -89,10 +103,24 @@
   margin-bottom: 42px;
 
   @include vp-768 {
+    position: relative;
+
     margin-bottom: 50px;
     padding: 64px 0 50px 0;
 
-    background-color: $color-white-smoke;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+
+      width: 100vw;
+      height: 100%;
+
+      background-color: $color-white-smoke;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
@@ -215,16 +243,16 @@
 
   border: 2px solid $color-charcoal;
 
-  @include vp-768 {
-    width: 52px;
-    height: 52px;
-  }
-
   &--radio {
     width: 42px;
     height: 42px;
 
     border-radius: 50%;
+  }
+
+  @include vp-768 {
+    width: 52px;
+    height: 52px;
   }
 }
 
@@ -275,7 +303,7 @@
 
     font-size: 19px;
 
-    grid-column: 2 / -1;
+    grid-column: 2/-1;
   }
 
   &:last-child {

@@ -63,12 +63,12 @@
 }
 
 .daily-product__card {
-  @include vp-768 {
-    display: grid;
+  display: grid;
 
+  @include vp-768 {
     column-gap: 42px;
 
-    grid-template-columns: 292px auto;
+    grid-template-columns: auto auto;
     grid-template-rows: repeat(3, auto);
   }
 
@@ -127,9 +127,11 @@
 .daily-product__img {
   margin-bottom: 26px;
 
+  justify-self: center;
+
   @include vp-768 {
-    grid-column: 2 / -1;
-    grid-row: 1 / -1;
+    grid-column: 2/-1;
+    grid-row: 1/-1;
   }
 }
 
@@ -149,8 +151,6 @@
 }
 
 .daily-product__button {
-  min-width: 260px;
-
   @include vp-768 {
     min-width: 292px;
 

@@ -1,14 +1,16 @@
 .intro {
+  background-color: $color-white-smoke;
+}
+
+.intro__container {
   padding: 74px 30px;
 
-  background-color: $color-white-smoke;
-
   @include vp-768 {
-    padding: 57px 50px 63px 50px;
+    padding: 101px 50px 63px 50px;
   }
 
   @include vp-1150 {
-    padding: 58px 50px 79px 50px;
+    padding: 102px 50px 79px 50px;
   }
 }
 
