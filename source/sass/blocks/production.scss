@@ -1,25 +1,94 @@
 .production {
-  padding: 21px 30px 33px;
-  border-top: 1px solid $color-whisper;
-  border-bottom: 1px solid $color-whisper;
+  padding: 0 30px 58px 30px;
+
+  @include vp-768 {
+    padding: 0 50px 64px 50px;
+  }
+
+  @include vp-1150 {
+    padding-bottom: 105px;
+  }
+}
+
+.production__card {
   display: grid;
-  grid-template-rows: min-content 150px auto min-content;
+
+  border: 1px solid $color-whisper;
+
+  grid-template-rows: repeat(4, min-content);
+
+  @include vp-1150 {
+    column-gap: 80px;
+
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
 .production__title {
   margin: 0;
-  padding: 0 13px 0 91px;
+  padding: 21px 13px 27px 91px;
+
   font-size: $fz-default;
   line-height: 24px;
+
+  @include vp-768 {
+    padding: 41px 40px 25px 107px;
+
+    font-size: 20px;
+  }
+
+  @include vp-1150 {
+    padding: 96px 110px 28px 0;
+  }
+}
+
+.production__video {
+  position: relative;
+
+  grid-row: 1/2;
+
+  @include vp-1150 {
+    grid-row: 1/-1;
+  }
+}
+
+.production__play-button {
+  position: absolute;
+  top: 40px;
+  left: 83px;
 }
 
 .production__text {
+  margin: 0;
   padding: 35px 0 41px 34px;
+
   font-size: 13px;
   color: $color-charcoal;
+
+  @include vp-768 {
+    padding: 0 40px 41px 40px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  @include vp-1150 {
+    padding: 0 36px 52px 0;
+  }
 }
 
 .production__link {
   width: 192px;
+  margin-bottom: 33px;
   justify-self: center;
+
+  @include vp-768 {
+    width: 584px;
+  }
+
+  @include vp-1150 {
+    width: 230px;
+
+    justify-self: start;
+  }
 }

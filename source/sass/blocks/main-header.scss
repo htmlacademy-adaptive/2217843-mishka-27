@@ -1,29 +1,111 @@
 .main-header {
   position: relative;
+  z-index: 1;
+
+  width: 100%;
   min-height: 79px;
-  padding: 22px 30px;
+
+  @include vp-768 {
+    min-height: 88px;
+    padding: 0 50px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+    left: 0;
+
+    height: 1px;
+
+    background-color: $color-whisper;
+  }
 }
 
 .main-header__logo {
   position: absolute;
   top: 22px;
   left: 50%;
+  z-index: 2;
+
   transform: translateX(-50%);
+
+  @include vp-768 {
+    left: 48px;
+
+    transform: none;
+  }
+
+  @include vp-1150 {
+    top: 9px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
 }
 
 .main-header__button {
-  display: block;
-  margin: 10px 0 0 auto;
+  position: absolute;
+  top: 29px;
+  right: 30px;
+
   width: 21px;
   height: 20px;
+  margin: 0 0 0 auto;
+
+  background-color: $color-transparent;
+  background-image: url("../img/svg/hamburger.svg");
+  background-repeat: no-repeat;
+  border: none;
+
+  @include vp-768 {
+    display: none;
+  }
+
+  &--is-open {
+    background-image: url("../img/svg/cross.svg");
+  }
 }
 
 .main-header__navigation {
+  position: absolute;
+  top: 79px;
+  left: 0;
+
   display: none;
+  width: 100%;
+
+  background-color: $color-default-white;
+
+  @include vp-768 {
+    top: 0;
+
+    display: grid;
+    padding: 0 50px;
+
+    background-color: $color-transparent;
+
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 88px auto;
+  }
+
+  &--is-open {
+    display: block;
+  }
 }
 
 .main-header__text {
+  position: absolute;
+  right: 50px;
+  bottom: -45px;
+
+  display: none;
+
   font-size: 15px;
   color: $color-charcoal;
-  display: none;
+
+  @include vp-768 {
+    display: block;
+  }
 }

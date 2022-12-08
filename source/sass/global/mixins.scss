@@ -1,0 +1,11 @@
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
+    @content;
+  }
+}
+
+@mixin vp-1150 {
+  @media (min-width: $vp-1150) {
+    @content;
+  }
+}
