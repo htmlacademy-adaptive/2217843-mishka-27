@@ -4,12 +4,18 @@
 
   @include vp-768 {
     padding: 68px 0 57px 0;
+
+    background-image: url("../img/svg/flag.svg");
+    background-repeat: no-repeat;
+    background-position: right 50px top 46px;
   }
 
   @include vp-1150 {
     padding: 71px 50px 105px 224px;
 
     column-gap: 23px;
+
+    background-position: left 113px top 133px;
 
     grid-template-columns: 327px auto;
     grid-template-rows: repeat(3, min-content);
@@ -46,9 +52,9 @@
   display: grid;
   align-items: start;
   margin-bottom: 62px;
-  padding: 0 30px;
+  padding: 0 30px 0 29px;
 
-  grid-template-columns: 76px auto;
+  grid-template-columns: 77px auto;
 
   @include vp-768 {
     margin-bottom: 49px;
@@ -66,6 +72,7 @@
     grid-column: 1/2;
     grid-template-columns: 78px auto;
   }
+  row-gap: 30px;
 }
 
 .contacts__subtitle {
@@ -92,16 +99,23 @@
   @include vp-768 {
     font-size: 17px;
   }
+}
 
-  &--email {
-    position: relative;
+.contacts__text--email {
+  position: relative;
+
+  justify-self: start;
+
+  &:hover,
+  &:active {
+    color: $color-puerto-rico-secondary;
   }
 
-  &--email::before {
+  &::before {
     content: "";
     position: absolute;
     right: 0;
-    bottom: 1px;
+    bottom: 3px;
     left: 0;
 
     height: 1px;
@@ -110,39 +124,57 @@
   }
 }
 
+.contacts__text--email:hover::before {
+  background-color: $color-puerto-rico-secondary;
+}
+
+.contacts__text--email:active::before {
+  background-color: rgba($color-puerto-rico-secondary, 10%);
+}
+
 .contacts__map {
-  width: 320px;
-  height: 455px;
-  margin: 0 0 42px 0;
+  min-width: 320px;
+  height: 454px;
+  margin-top: 0;
+  margin-bottom: 41px;
 
   background-image: url("../img/background/map-mobile.png");
   background-repeat: no-repeat;
-
-  justify-self: center;
+  background-position: center;
 
   @include vp-768 {
-    width: 768px;
+    min-width: 768px;
     height: 457px;
     margin-bottom: 55px;
 
     background-image: url("../img/background/map-tablet.png");
-    background-repeat: no-repeat;
   }
 
   @include vp-1150 {
     width: 527px;
+    min-width: 527px;
     height: 457px;
-    margin-bottom: 0;
+    margin: 0;
 
     background-image: url("../img/background/map-desktop.png");
-    background-repeat: no-repeat;
 
     grid-column: 2/-1;
     grid-row: 1/-1;
   }
+  justify-self: stretch;
+}
+
+.contacts__map iframe {
+  display: block;
+  width: 100%;
+
+  border: none;
 }
 
 .contacts__write {
+  width: 260px;
+  margin: 0 auto;
+
   @include vp-768 {
     width: 230px;
 

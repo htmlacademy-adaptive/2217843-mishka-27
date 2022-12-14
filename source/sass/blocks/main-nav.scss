@@ -1,3 +1,21 @@
+.main-nav {
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    border-top: 1px solid $color-whisper;
+  }
+
+  @include vp-768 {
+    display: grid;
+    padding: 0 50px;
+
+    background-color: $color-transparent;
+
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 88px auto;
+  }
+}
+
 .main-nav__list {
   margin: 0;
   padding: 0;
@@ -34,7 +52,7 @@
 }
 
 .main-nav__item {
-  padding: 29px 30px 27px 76px;
+  padding: 28px 30px 26px 76px;
 
   border-bottom: 1px solid $color-whisper;
 
@@ -48,14 +66,14 @@
     padding-top: 33px;
   }
 
-  &--odd {
-    @include vp-1150 {
-      border-right: 1px solid $color-whisper;
-    }
-  }
-
   &--extras {
     padding-top: 19px;
+  }
+}
+
+.main-nav__item--odd {
+  @include vp-1150 {
+    border-right: 1px solid $color-whisper;
   }
 }
 
@@ -67,6 +85,14 @@
 
   @include vp-768 {
     font-size: 15px;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 
   &--pages {

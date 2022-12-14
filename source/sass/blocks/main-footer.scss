@@ -5,7 +5,7 @@
 .main-footer__container {
   position: relative;
 
-  padding: 25px 30px 23px 30px;
+  padding: 29px 30px 18px 30px;
 
   @include vp-768 {
     display: flex;
@@ -38,9 +38,20 @@
   }
 }
 
+.main-footer__logo-image {
+  fill: $color-default-black;
+}
+
+.main-footer__logo:hover .main-footer__logo-image {
+  fill: $color-puerto-rico-secondary;
+}
+
+.main-footer__logo:active .main-footer__logo-image {
+  fill: rgba($color-puerto-rico-secondary, 30%);
+}
+
 .main-footer__social {
-  width: 172px;
-  margin: 0 auto 55px;
+  margin: 0 auto 52px;
 
   @include vp-768 {
     margin: 0;
@@ -66,4 +77,16 @@
   font-size: 19px;
   line-height: 18px;
   text-align: center;
+}
+
+.main-footer__copyright-svg {
+  fill: $color-downy;
+}
+
+.main-footer__copyright-link:hover .main-footer__copyright-svg {
+  fill: $color-puerto-rico-secondary;
+}
+
+.main-footer__copyright-link:active .main-footer__copyright-svg {
+  fill: rgba($color-puerto-rico-secondary, 30%);
 }
