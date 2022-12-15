@@ -18,11 +18,25 @@
 
 .product-card__image-link {
   display: block;
-  justify-self: center;
+  overflow: hidden;
+
+  line-height: 0;
 
   @include vp-768 {
+    width: 334px;
+    height: auto;
+
     grid-column: 1/2;
   }
+
+  @include vp-1150 {
+    width: auto;
+  }
+  justify-self: center;
+}
+
+.product-card__image {
+  width: 100%;
 }
 
 .product-card__description {
@@ -90,4 +104,23 @@
   @include vp-768 {
     font-size: $fz-default;
   }
+}
+
+.product-card__button {
+  background-color: $color-transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.product-card__button-icon {
+  fill: rgba($color-default-black, 20%);
+}
+
+.product-card__button:hover .product-card__button-icon {
+  fill: $color-downy;
+}
+
+.product-card__button:active .product-card__button-icon {
+  fill: rgba($color-downy, 30%);
 }

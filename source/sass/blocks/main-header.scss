@@ -3,10 +3,12 @@
   z-index: 1;
 
   width: 100%;
-  min-height: 79px;
+  min-height: 80px;
+
+  border-top: 1px solid $color-whisper;
 
   @include vp-768 {
-    min-height: 88px;
+    min-height: 89px;
     padding: 0 50px;
   }
 
@@ -14,12 +16,32 @@
     content: "";
     position: absolute;
     right: 0;
-    bottom: 1px;
+    bottom: -1px;
     left: 0;
 
     height: 1px;
 
     background-color: $color-whisper;
+  }
+}
+
+.main-header--no-js .main-header__navigation {
+  @include vp-767 {
+    position: static;
+
+    display: block;
+    padding-top: 80px;
+  }
+}
+
+.main-header--no-js .main-header__button {
+  display: none;
+}
+
+.main-header--no-js::before {
+  @include vp-767 {
+    top: 79px;
+    bottom: auto;
   }
 }
 
@@ -47,7 +69,7 @@
 
 .main-header__button {
   position: absolute;
-  top: 29px;
+  top: 30px;
   right: 30px;
 
   width: 21px;
@@ -55,16 +77,28 @@
   margin: 0 0 0 auto;
 
   background-color: $color-transparent;
-  background-image: url("../img/svg/hamburger.svg");
   background-repeat: no-repeat;
   border: none;
+  cursor: pointer;
 
   @include vp-768 {
     display: none;
   }
 
+  &--closed {
+    background-image: url("../img/svg/hamburger.svg");
+  }
+
   &--is-open {
     background-image: url("../img/svg/cross.svg");
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }
 
@@ -73,21 +107,14 @@
   top: 79px;
   left: 0;
 
-  display: none;
   width: 100%;
-
-  background-color: $color-default-white;
 
   @include vp-768 {
     top: 0;
+  }
 
-    display: grid;
-    padding: 0 50px;
-
-    background-color: $color-transparent;
-
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: 88px auto;
+  &--closed {
+    display: none;
   }
 
   &--is-open {

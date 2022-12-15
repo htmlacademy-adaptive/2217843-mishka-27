@@ -1,9 +1,39 @@
 .hero {
+  position: relative;
+
   background-color: $color-snow;
-  background-image: url("../img/background/hero-mobile.jpg");
+  background-image: url("../img/background/hero-mobile.png");
   background-repeat: no-repeat;
-  background-position: top -47px center;
-  background-size: contain;
+  background-position: 50% -17px;
+
+  @include vp-768 {
+    background-image: url("../img/background/hero-desktop.png");
+    background-position: 50% 0;
+  }
+
+  &::before {
+    @include vp-768 {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      z-index: 1;
+
+      width: 100%;
+      height: 24px;
+
+      background-image: url("../img/svg/zigzag-line-white.svg");
+      background-repeat: repeat-x;
+    }
+
+    @include vp-1150 {
+      bottom: -17px;
+
+      height: 34px;
+
+      background-image: url("data:image/svg+xml,%3Csvg width='56' height='34' viewBox='0 0 56 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1066.97 0C1052.91 0 1052.91 14 1038.95 14C1024.98 14 1024.89 0 1010.92 0C996.957 0 996.86 14 982.895 14C968.833 14 968.833 0 954.771 0C940.71 0 940.71 14 926.745 14C912.683 14 912.683 0 898.719 0C884.657 0 884.657 14 870.693 14C856.729 14 856.338 0 842.374 0C828.312 0 828.312 14 814.348 14C800.383 14 800.188 0 786.224 0C772.162 0 772.162 14 758.198 14C744.136 14 744.136 0 730.074 0C716.012 0 716.012 14 702.048 14C687.986 14 687.986 0 674.021 0C660.057 0 659.862 14 645.8 14C631.738 14 631.738 0 617.774 0C603.712 0 603.712 14 589.748 14C575.686 14 575.686 0 561.624 0C547.562 0 547.562 14 533.598 14C519.536 14 519.536 0 505.571 0C491.51 0 491.51 14 477.545 14C463.483 14 463.483 0 449.519 0C435.457 0 435.457 14 421.395 14C407.333 14 407.333 0 393.271 0C379.21 0 379.21 14 365.148 14C351.086 14 351.086 0 337.024 0C322.962 0 322.962 14 308.9 14C294.838 14 294.838 0 280.776 0C266.714 0 266.714 14 252.652 14C238.59 14 238.59 0 224.529 0C210.467 0 210.467 14 196.502 14C182.44 14 182.44 0 168.379 0C154.317 0 154.317 14 140.255 14C126.193 14 126.193 0 112.131 0C98.069 0 98.069 14 84.007 14C69.9451 14 69.9451 0 55.8832 0C42.2119 0 42.2119 14 28.15 14C14.0881 14 14.0881 0 0.123825 0C-13.8404 0 -13.9381 14 -28 14V34H1095V14C1080.94 14 1080.94 0 1066.97 0Z' fill='white'/%3E%3C/svg%3E%0A");
+    }
+  }
 }
 
 .hero__container {
@@ -38,6 +68,18 @@
   }
 }
 
+.hero__title br {
+  @include vp-768 {
+    display: none;
+  }
+}
+
+.hero__title br:last-child {
+  @include vp-1150 {
+    display: inline;
+  }
+}
+
 .hero__list {
   margin: 0;
   padding: 0;
@@ -51,33 +93,88 @@
   }
 }
 
-.hero__item {
-  background-color: $color-downy;
-
-  &--dark {
-    background-color: $color-puerto-rico;
-  }
-}
-
 .hero__link {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 23px 36px 18px 30px;
+  padding: 24px 160px 31px 30px;
 
   font-weight: 700;
   font-size: 19px;
   color: $color-default-white;
 
+  background-color: $color-downy;
+
   @include vp-768 {
-    padding: 30px 36px 15px 36px;
+    padding: 25px 167px 34px 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include vp-1150 {
+    padding: 25px 350px 34px 37px;
+  }
+
+  &:hover {
+    margin-top: -5px;
+    padding-bottom: 36px;
+
+    background-color: $color-downy-secondary;
+  }
+
+  &:active {
+    padding-bottom: 36px;
+
+    background-color: $color-downy-secondary;
+  }
+}
+
+.hero__link--toys {
+  background-color: $color-puerto-rico;
+
+  @include vp-1150 {
+    padding-left: 36px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-puerto-rico-secondary;
+  }
+}
+
+.hero__icon {
+  position: absolute;
+  top: 25px;
+  right: 36px;
+
+  fill: rgba($color-dark-cyan, 50%);
+
+  @include vp-768 {
+    top: 30px;
   }
 
   &--toys {
-    padding: 21px 27px 22px 30px;
+    top: 21px;
+    right: 27px;
 
     @include vp-768 {
-      padding: 31px 33px 15px 36px;
+      top: 31px;
+      right: 33px;
+    }
+
+    @include vp-1150 {
+      right: 35px;
     }
   }
+}
+
+.hero__link:hover .hero__icon {
+  fill: rgba($color-dark-cyan, 70%);
+}
+
+.hero__link:active .hero__icon {
+  fill: rgba($color-dark-cyan, 30%);
 }

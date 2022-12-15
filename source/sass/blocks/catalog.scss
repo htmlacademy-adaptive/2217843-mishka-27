@@ -29,15 +29,15 @@
 .catalog__item {
   margin-bottom: 30px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   @include vp-768 {
     margin-bottom: 54px;
   }
 
   @include vp-1150 {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
     margin-bottom: 0;
   }
 }
