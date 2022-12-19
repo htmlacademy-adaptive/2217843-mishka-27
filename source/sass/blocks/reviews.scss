@@ -4,7 +4,7 @@
   padding-bottom: 51px;
 
   @include vp-768 {
-    padding-bottom: 85px;
+    padding-bottom: 89px;
   }
 
   @include vp-1150 {
@@ -49,6 +49,11 @@
     background-position: top left;
 
     grid-template-columns: auto 175px;
+
+    @include retina {
+      background-image: url("../img/background/review@2x.png");
+      background-size: contain;
+    }
   }
 
   @include vp-1150 {
@@ -118,6 +123,12 @@
   }
 }
 
+.reviews__text br:first-child {
+  @include vp-1150 {
+    display: inline;
+  }
+}
+
 .reviews__author-info {
   @include vp-768 {
     display: flex;
@@ -159,6 +170,10 @@
     margin: 0;
 
     border: none;
+  }
+
+  @include vp-1150 {
+    bottom: 99px;
   }
   justify-self: end;
 }

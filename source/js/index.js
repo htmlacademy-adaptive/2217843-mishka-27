@@ -1,19 +1,19 @@
 let button = document.querySelector('.main-header__button');
-let navigation = document.querySelector('.main-header__navigation');
-let header =  document.querySelector('.main-header');
+let navigation = document.querySelector('.main-header__nav');
+let navWrapper =  document.querySelector('.main-header__nav-wrapper');
 
-header.classList.remove('main-header--no-js');
+navigation.classList.remove('main-header__nav--no-js');
 button.classList.add('main-header__button--closed');
 
 button.addEventListener('click', function () {
-  if (navigation.classList.contains('main-header__navigation--closed')) {
-    navigation.classList.remove('main-header__navigation--closed');
-    navigation.classList.add('main-header__navigation--is-open');
+  if (navWrapper.classList.contains('main-header__nav-wrapper--nav-closed')) {
+    navWrapper.classList.remove('main-header__nav-wrapper--nav-closed');
+    navWrapper.classList.add('main-header__nav-wrapper--nav-is-open');
     button.classList.remove('main-header__button--closed');
     button.classList.add('main-header__button--is-open');
   } else {
-    navigation.classList.add('main-header__navigation--closed');
-    navigation.classList.remove('main-header__navigation--is-open');
+    navWrapper.classList.add('main-header__nav-wrapper--nav-closed');
+    navWrapper.classList.remove('main-header__nav-wrapper--nav-is-open');
     button.classList.remove('main-header__button--is-open');
     button.classList.add('main-header__button--closed');
   }

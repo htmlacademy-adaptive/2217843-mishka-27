@@ -2,21 +2,26 @@
   padding: 30px;
 
   @include vp-768 {
-    padding: 67px 50px 53px 50px;
+    padding: 79px 50px 53px 50px;
   }
 
   @include vp-1150 {
-    padding: 111px 50px 57px 50px;
+    padding: 129px 50px 57px 50px;
   }
 }
 
 .catalog__list {
   display: grid;
-  justify-content: center;
+  justify-content: stretch;
+
   margin: 0;
   padding: 0;
 
   list-style-type: none;
+
+  @include vp-768 {
+    justify-content: center;
+  }
 
   @include vp-1150 {
     justify-content: space-between;

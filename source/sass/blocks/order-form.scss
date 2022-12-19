@@ -4,11 +4,11 @@
   padding: 17px 30px 55px 30px;
 
   @include vp-768 {
-    padding: 54px 0 50px 0;
+    padding: 68px 0 50px 0;
   }
 
   @include vp-1150 {
-    padding-top: 99px;
+    padding-top: 118px;
   }
 }
 
@@ -20,7 +20,7 @@
   color: $color-charcoal;
 
   @include vp-768 {
-    margin-bottom: 63px;
+    margin-bottom: 64px;
     padding: 0 50px;
 
     font-size: 17px;
@@ -28,12 +28,13 @@
   }
 
   @include vp-1150 {
+    margin-bottom: 76px;
     padding: 0 223px 0 225px;
   }
 }
 
 .order-form__fieldset {
-  margin: 0 0 51px 0;
+  margin: 0 0 43px 0;
   padding: 0;
 
   border: none;
@@ -41,29 +42,51 @@
 
   @include vp-768 {
     display: grid;
-    margin-bottom: 67px;
-    padding: 0 50px;
+    align-items: baseline;
+    margin-bottom: 65px;
+    padding: 13px 50px 0 50px;
 
     border: none;
 
-    grid-template-columns: 167px auto;
+    grid-template-columns: 169px auto;
   }
 
   @include vp-1150 {
     margin-bottom: 66px;
-    padding: 0 225px 0 97px;
+    padding: 0 225px 0 112px;
 
-    grid-template-columns: 128px auto;
+    grid-template-columns: 114px auto;
   }
 
   &--fio {
-    margin-bottom: 42px;
+    margin-bottom: 33px;
+
+    @include vp-768 {
+      margin-bottom: 48px;
+      padding-top: 0;
+
+      grid-template-columns: 167px auto;
+    }
+
+    @include vp-1150 {
+      margin-bottom: 47px;
+
+      grid-template-columns: 115px auto;
+    }
   }
 
   &--tel {
     position: relative;
 
-    margin-bottom: 42px;
+    margin-bottom: 36px;
+
+    @include vp-768 {
+      margin-bottom: 7px;
+    }
+
+    @include vp-1150 {
+      margin-bottom: 20px;
+    }
   }
 
   &--email {
@@ -73,7 +96,15 @@
   }
 
   &--textarea {
-    margin-bottom: 63px;
+    margin-bottom: 56px;
+
+    @include vp-768 {
+      margin-bottom: 52px;
+    }
+
+    @include vp-1150 {
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -81,7 +112,10 @@
   @include vp-768 {
     position: relative;
 
-    padding: 65px 50px 69px 50px;
+    margin-bottom: 46px;
+    padding: 66px 50px 65px 50px;
+
+    grid-template-columns: 167px auto;
 
     &::before {
       content: "";
@@ -99,18 +133,20 @@
   }
 
   @include vp-1150 {
-    padding: 68px 100px 67px 97px;
+    padding: 63px 100px 9px 112px;
+
+    grid-template-columns: 114px auto;
   }
 }
 
 .order-form__fieldset-group {
-  margin-bottom: 42px;
+  margin-bottom: 34px;
 
   @include vp-768 {
     position: relative;
 
-    margin-bottom: 50px;
-    padding: 64px 0 50px 0;
+    margin-bottom: 37px;
+    padding: 33px 0 50px 0;
 
     &::before {
       content: "";
@@ -125,6 +161,11 @@
       background-color: $color-white-smoke;
       transform: translate(-50%, -50%);
     }
+  }
+
+  @include vp-1150 {
+    margin-bottom: 51px;
+    padding: 45px 0 50px 0;
   }
 }
 
@@ -148,11 +189,11 @@
   }
 
   &--tel {
-    margin-bottom: 19px;
+    margin-bottom: 5px;
   }
 
   &--email {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   &--textarea {
@@ -174,11 +215,12 @@
     @include vp-768 {
       display: grid;
 
-      grid-template-columns: repeat(2, auto);
+      grid-template-columns: 262px auto;
+      grid-template-rows: 78px 76px auto;
     }
 
     @include vp-1150 {
-      grid-template-columns: repeat(3, auto);
+      grid-template-columns: 260px auto auto;
     }
   }
 }
@@ -234,20 +276,27 @@
 
   @include vp-768 {
     padding-left: 78px;
+
+    &--checkbox {
+      padding-left: 80px;
+    }
   }
 }
 
 .order-form__control-mark {
   position: absolute;
-  top: -10px;
+  top: 50%;
   left: 0;
 
   width: 38px;
   height: 38px;
 
   border: 2px solid $color-charcoal;
+  transform: translateY(-50%);
 
   &--radio {
+    top: 47%;
+
     width: 42px;
     height: 42px;
 
@@ -321,10 +370,15 @@
 
   @include vp-768 {
     flex-direction: row;
+    margin-bottom: 21px;
 
     font-size: 19px;
 
     grid-column: 2/-1;
+
+    &:nth-last-child(2) {
+      margin-bottom: 19px;
+    }
   }
 
   &:last-child {
@@ -344,7 +398,7 @@
 .order-form__field {
   flex-grow: 1;
   min-width: 260px;
-  padding: 17px 10px 17px 0;
+  padding: 17px 10px 15px 0;
 
   font-size: 17px;
   line-height: 18px;
@@ -355,7 +409,14 @@
   border-bottom: 2px solid $color-default-black;
 
   @include vp-768 {
+    padding-bottom: 12px;
+    padding-left: 17px;
+
     font-size: 19px;
+  }
+
+  &--tel {
+    padding-top: 15px;
   }
 
   &::placeholder {
@@ -387,13 +448,17 @@
   top: 11px;
   right: 7px;
 
+  pointer-events: none;
+
   fill: $color-downy-tertiary;
 
   @include vp-768 {
-    right: 56px;
+    top: 28px;
+    right: 76px;
   }
 
   @include vp-1150 {
+    top: 17px;
     right: 233px;
   }
 
@@ -402,10 +467,12 @@
     right: 3px;
 
     @include vp-768 {
-      right: 52px;
+      top: 33px;
+      right: 72px;
     }
 
     @include vp-1150 {
+      top: 23px;
       right: 229px;
     }
   }
@@ -415,15 +482,15 @@
   fill: rgba($color-default-black, 20%);
 }
 
-.order-form__fieldset:hover .order-form__icon,
-.order-form__fieldset:active .order-form__icon {
+.order-form__field:hover ~ .order-form__icon,
+.order-form__field:active ~ .order-form__icon {
   fill: $color-downy-tertiary;
 }
 
 .order-form__textarea {
   min-width: 260px;
   min-height: 142px;
-  padding: 17px;
+  padding: 15px;
 
   font-size: 17px;
   line-height: 18px;
@@ -473,12 +540,14 @@
 
   @include vp-1150 {
     right: 225px;
-    bottom: 61px;
+    bottom: 60px;
   }
 }
 
 .order-form__button {
   width: 260px;
+
+  font-size: 17px;
 
   @include vp-768 {
     width: 230px;
@@ -487,5 +556,7 @@
 
   @include vp-1150 {
     margin-left: 225px;
+
+    line-height: 17px;
   }
 }

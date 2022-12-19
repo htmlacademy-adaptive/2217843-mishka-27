@@ -1,8 +1,6 @@
 .product-card {
   display: grid;
 
-  border: 1px solid $color-whisper;
-
   grid-template-rows: auto auto;
 
   @include vp-768 {
@@ -17,7 +15,6 @@
 }
 
 .product-card__image-link {
-  display: block;
   overflow: hidden;
 
   line-height: 0;
@@ -32,7 +29,7 @@
   @include vp-1150 {
     width: auto;
   }
-  justify-self: center;
+  justify-self: stretch;
 }
 
 .product-card__image {
@@ -44,24 +41,28 @@
   min-height: 179px;
   padding: 28px 32px 27px 28px;
 
+  border: 1px solid $color-whisper;
+
   grid-template-columns: 1fr 21px;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: 1fr min-content min-content;
 
   @include vp-768 {
     min-height: 334px;
     padding: 27px 32px 26px 34px;
+
+    grid-template-rows: min-content 1fr min-content;
   }
 
   @include vp-1150 {
     min-height: min-content;
-    padding: 27px 26px 26px 28px;
+    padding: 27px 31px 26px 27px;
 
     grid-row: 2/-1;
   }
 }
 
 .product-card__title-link {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 
   color: inherit;
 
@@ -81,7 +82,7 @@
 }
 
 .product-card__parameters {
-  margin-bottom: 12px;
+  margin-bottom: 17px;
 
   font-size: 13px;
   line-height: 30px;
@@ -92,21 +93,48 @@
   @include vp-768 {
     font-size: 15px;
   }
+
+  @include vp-1150 {
+    margin-bottom: 14px;
+  }
 }
 
 .product-card__price {
-  align-self: center;
+  position: relative;
+
+  align-self: start;
+  padding-top: 22px;
 
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
 
   @include vp-768 {
+    padding-top: 22px;
+
     font-size: $fz-default;
   }
 }
 
+.product-card__price::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -28px;
+  left: 0;
+
+  height: 1px;
+
+  background-color: $color-whisper;
+
+  @include vp-1150 {
+    right: -21px;
+  }
+}
+
 .product-card__button {
+  padding: 22px 0 0 0;
+
   background-color: $color-transparent;
   background-repeat: no-repeat;
   border: none;
@@ -123,4 +151,12 @@
 
 .product-card__button:active .product-card__button-icon {
   fill: rgba($color-downy, 30%);
+}
+
+.product-card:hover .product-card__description {
+  box-shadow: 0 6px 10px 0 rgba($color-default-black, 10%);
+}
+
+.product-card:active .product-card__description {
+  box-shadow: 0 3px 5px 0 rgba($color-default-black, 10%);
 }

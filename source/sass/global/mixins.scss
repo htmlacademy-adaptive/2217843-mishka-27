@@ -1,3 +1,9 @@
+@mixin retina {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
 @mixin vp-768 {
   @media (min-width: $vp-768) {
     @content;
