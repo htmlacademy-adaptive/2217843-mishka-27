@@ -4,64 +4,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка - Форма</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="page-wrapper">
 
-    <header class="main-header main-header--no-js container">
+    <header class="main-header main-header--inner">
 
-    <a class="main-header__logo" href="index.html">
-      <img src="img/svg/logo-mobile.svg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
-      <span class="visually-hidden">Переход на главную страницу.</span>
-    </a>
+      <nav class="main-header__nav main-header__nav--no-js">
 
-    <button class="main-header__button" type="button">
-      <span class="visually-hidden">Открыть меню.</span>
-    </button>
+      <a class="main-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/svg/logo-desktop.svg" width="149" height="72">
+          <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" width="114" height="46">
+          <img src="img/svg/logo-mobile.svg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
+        </picture>
+        <span class="visually-hidden">Переход на главную страницу.</span>
+      </a>
 
-    <nav class="main-header__navigation main-header__navigation--closed main-nav">
-      <ul class="main-nav__list main-nav__list--pages">
-        <li class="main-nav__item main-nav__item--pages main-nav__item--odd">
-          <a class="main-nav__link main-nav__link--pages" href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="main-nav__item main-nav__item--pages">
-          <span class="main-nav__link main-nav__link--pages">Вязание на заказ</span>
-        </li>
-      </ul>
+      <button class="main-header__button" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
 
-      <ul class="main-nav__list user-menu">
-        <li class="user-menu__item user-menu__item--search">
-          <a class="user-menu__link" href="#">
-            <svg class="user-menu__icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m17.7 16.06-3.48-3.48a7.63 7.63 0 0 0 1.53-4.7c0-4.4-3.48-7.88-7.88-7.88A7.81 7.81 0 0 0 0 7.88c0 4.4 3.48 7.87 7.88 7.87 1.73 0 3.37-.61 4.7-1.53l3.48 3.47c.2.2.4.31.82.31.6 0 1.12-.51 1.12-1.13 0-.2-.1-.5-.3-.81ZM2.24 7.88a5.67 5.67 0 0 1 5.63-5.63 5.67 5.67 0 0 1 5.62 5.63 5.67 5.67 0 0 1-5.63 5.62 5.67 5.67 0 0 1-5.62-5.63Z"/>
-            </svg>
-            <span class="user-menu__text user-menu__text--search">Поиск по сайту</span>
-          </a>
-        </li>
-        <li class="user-menu__item user-menu__item--cart">
-          <a class="user-menu__link" href="#">
-            <svg class="user-menu__icon user-menu__icon--cart" aria-hidden="true" focusable="false" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.48-1.02-.28-.4.19-.5.57-.3.95l3.14 5.8H5.78l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 0 0 7.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.28.81-.76s-.4-.76-.81-.76Zm-4.57 9.62H5.07l-1.21-4.1h13.08l-1.32 4.1Zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66Z"/>
-              </svg>
-            <span class="user-menu__text">Корзина: пока пуста</span>
-          </a>
-        </li>
-      </ul>
+      <div class="main-header__nav-wrapper main-header__nav-wrapper--nav-closed">
 
-      <ul class="main-nav__list main-nav__list--extras">
-        <li class="main-nav__item main-nav__item--extras">
-          <a class="main-nav__link main-nav__link--extras" href="#">Новые поступления</a>
-        </li>
-        <li class="main-nav__item main-nav__item--extras">
-          <a class="main-nav__link main-nav__link--extras" href="#">Распродажа</a>
-        </li>
-      </ul>
-    </nav>
+          <ul class="main-header__site-nav">
+            <li class="main-header__site-item">
+              <a class="main-header__site-link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-header__site-item">
+              <span class="main-header__site-link">Вязание на заказ</span>
+            </li>
+          </ul>
 
-    <span class="main-header__text">Бесплатная доставка по России</span>
-  </header>
+          <ul class="main-header__user-nav">
+            <li class="main-header__user-item main-header__user-item--search">
+              <a class="main-header__user-link main-header__user-link--search" href="#">
+                <svg class="main-header__user-icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m17.7 16.06-3.48-3.48a7.63 7.63 0 0 0 1.53-4.7c0-4.4-3.48-7.88-7.88-7.88A7.81 7.81 0 0 0 0 7.88c0 4.4 3.48 7.87 7.88 7.87 1.73 0 3.37-.61 4.7-1.53l3.48 3.47c.2.2.4.31.82.31.6 0 1.12-.51 1.12-1.13 0-.2-.1-.5-.3-.81ZM2.24 7.88a5.67 5.67 0 0 1 5.63-5.63 5.67 5.67 0 0 1 5.62 5.63 5.67 5.67 0 0 1-5.63 5.62 5.67 5.67 0 0 1-5.62-5.63Z"/>
+                </svg>
+                <span class="main-header__user-text main-header__user-text--search">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="main-header__user-item main-header__user-item--cart">
+              <a class="main-header__user-link main-header__user-link--cart" href="#">
+                <svg class="main-header__user-icon main-header__user-icon--cart" aria-hidden="true" focusable="false" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.48-1.02-.28-.4.19-.5.57-.3.95l3.14 5.8H5.78l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 0 0 7.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.28.81-.76s-.4-.76-.81-.76Zm-4.57 9.62H5.07l-1.21-4.1h13.08l-1.32 4.1Zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66Z"/>
+                  </svg>
+                <span class="main-header__user-text">Корзина: пока пуста</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="main-header__news-nav">
+            <li class="main-header__news-item">
+              <a class="main-header__news-link" href="#">Новые поступления</a>
+            </li>
+            <li class="main-header__news-item">
+              <a class="main-header__news-link" href="#">Распродажа</a>
+            </li>
+          </ul>
+
+      <span class="main-header__delivery-text">Бесплатная доставка по России</span>
+      </div>
+      </nav>
+    </header>
 
   <main class="main-form">
     <section class="intro">
@@ -80,14 +92,14 @@
           <legend class="order-form__title">Тип</legend>
           <ul class="order-form__list">
             <li class="order-form__item order-form__item--radio">
-              <label class="order-form__control">
+              <label class="order-form__control order-form__control--radio">
                 <input class="visually-hidden order-form__control-input order-form__control-input--radio" type="radio" name="product-type" value="interior-accessory" checked>
                 <span class="order-form__control-mark order-form__control-mark--radio"></span>
                 <span class="order-form__control-label">Аксессуар для интерьера</span>
               </label>
             </li>
             <li class="order-form__item order-form__item--radio">
-              <label class="order-form__control">
+              <label class="order-form__control order-form__control--radio">
                 <input class="visually-hidden order-form__control-input order-form__control-input--radio" type="radio" name="product-type" value="baby-toy">
                 <span class="order-form__control-mark order-form__control-mark--radio"></span>
                 <span class="order-form__control-label">Детская игрушка</span>
@@ -98,45 +110,45 @@
 
         <fieldset class="order-form__fieldset order-form__fieldset--color">
 
-          <legend class="order-form__title">Цвет:</legend>
+          <legend class="order-form__title">Цвет</legend>
           <ul class="order-form__list order-form__list--checkbox">
             <li class="order-form__item order-form__item--checkbox">
-              <label class="order-form__control">
+              <label class="order-form__control order-form__control--checkbox">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="white" checked>
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Белый</span>
               </label>
             </li>
             <li class="order-form__item order-form__item--checkbox">
-              <label class="order-form__control">
+              <label class="order-form__control order-form__control--checkbox">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="grey" checked>
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Серый</span>
               </label>
             </li>
             <li class="order-form__item order-form__item--checkbox">
-              <label class="order-form__control">
+              <label class="order-form__control order-form__control--checkbox">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="tiffany">
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Тиффани</span>
               </label>
             </li>
             <li class="order-form__item order-form__item--checkbox">
-              <label class="order-form__control">
+              <label class="order-form__control order-form__control--checkbox">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="black">
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Черный</span>
               </label>
             </li>
             <li class="order-form__item order-form__item--checkbox">
-              <label class="order-form__control">
+              <label class="order-form__control order-form__control--checkbox">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="pink">
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Розовый</span>
               </label>
             </li>
             <li class="order-form__item order-form__item--checkbox">
-              <label class="order-form__control">
+              <label class="order-form__control order-form__control--checkbox">
                 <input class="visually-hidden order-form__control-input order-form__control-input--checkbox" type="checkbox" name="product-color" value="orange">
                 <span class="order-form__control-mark"></span>
                 <span class="order-form__control-label">Оранжевый</span>
@@ -230,14 +242,13 @@
     </ul>
   </div>
 
-  <div class="main-footer__copyright">
-    <span class="main-footer__copyright-text">Разработано</span>
-    <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive/">
-      <svg class="main-footer__copyright-svg" width="27" height="35" aria-label="HTML Academy." viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z"/>
-        </svg>
-    </a>
-    </div>
+  <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive/">
+    Разработано
+    <svg class="main-footer__copyright-svg" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z"/>
+    </svg>
+    <span class="visually-hidden">Переход на страницу HTML Academy.</span>
+  </a>
   </div>
 </footer>
   </div>
