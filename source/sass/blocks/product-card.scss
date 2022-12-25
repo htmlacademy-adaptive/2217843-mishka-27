@@ -44,6 +44,7 @@
   border: 1px solid $color-whisper;
 
   grid-template-columns: 1fr 21px;
+  column-gap: 40px;
   grid-template-rows: 1fr min-content min-content;
 
   @include vp-768 {
@@ -139,6 +140,7 @@
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+  align-self: end;
 }
 
 .product-card__button-icon {
