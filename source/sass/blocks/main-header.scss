@@ -71,7 +71,7 @@
 
 .main-header__button {
   position: absolute;
-  top: 31px;
+  top: 32px;
   right: 30px;
 
   width: 21px;
@@ -91,6 +91,7 @@
   }
 
   &--is-open {
+    top: 29px;
     background-image: url("../img/svg/cross.svg");
   }
 
@@ -136,14 +137,17 @@
   }
 
   &--nav-is-open {
-    position: absolute;
-    top: 80px;
-    left: 0;
-
     display: grid;
-    width: 100%;
+
+    @include vp-767 {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+    }
   }
 }
+
 
 .main-header__nav--no-js .main-header__nav-wrapper {
   display: grid;
@@ -166,6 +170,8 @@
 
   @include vp-1150 {
     padding-right: 100px;
+    display: grid;
+    grid-template-columns: 185px auto;
   }
 }
 
@@ -187,29 +193,29 @@
 }
 
 .main-header__site-item {
-  padding: 28px 30px 26px 76px;
+  padding: 27px 30px 27px 76px;
 
   border-bottom: 1px solid $color-whisper;
 
   @include vp-768 {
-    margin-right: 37px;
-    padding: 21px 0 0 0;
+    padding: 20px 37px 0 0;
 
     border: none;
 
     &:nth-child(even) {
-      margin-right: 10px;
+      padding-right: 10px;
     }
   }
 
   @include vp-1150 {
-    margin-right: 35px;
-    padding-top: 33px;
+    padding: 34px 34px 0 0;
+
+    &:nth-child(odd) {
+      border-right: 1px solid $color-whisper;
+    }
 
     &:nth-child(even) {
-      padding-left: 34px;
-
-      border-left: 1px solid $color-whisper;
+      padding-left: 35px;
     }
   }
 
@@ -236,6 +242,10 @@
     font-size: $fz-default;
   }
 
+  &--no-cursor {
+    pointer-events: none;
+  }
+
   &:hover {
     opacity: 60%;
   }
@@ -259,6 +269,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    align-content: flex-start;
     width: 52%;
     margin-left: auto;
   }
@@ -287,17 +298,22 @@
 }
 
 .main-header__user-item {
-  padding: 27px 30px 27px 30px;
+  padding: 26px 30px 27px 30px;
 
   border-bottom: 1px solid $color-whisper;
 
+  &--cart {
+    padding: 28px 30px 26px 30px;
+  }
+
   @include vp-768 {
     &--search {
-      padding: 35px 31px 30px 33px;
+      padding: 36px 31px 28px 33px;
 
       border-right: 1px solid $color-whisper;
-      border-bottom: none;
+
       border-left: 1px solid $color-whisper;
+      min-height: 89px;
     }
 
     &--cart {
@@ -307,13 +323,21 @@
     }
   }
 
-  &--cart {
-    padding: 28px 30px 27px 30px;
+  @include vp-1150 {
+    &--search {
+      padding-right: 32px;
+    }
+
+
+    &--cart {
+      padding-right: 2px;
+    }
   }
 }
 
 .main-header__user-link {
   position: relative;
+  display: block;
 
   padding-left: 46px;
 
@@ -438,5 +462,9 @@
     padding: 20px 0 20px 50px;
 
     text-align: right;
+  }
+
+  @include vp-1150 {
+    padding-right: 1px;
   }
 }

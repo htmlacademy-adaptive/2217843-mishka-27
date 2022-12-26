@@ -82,7 +82,7 @@
   position: relative;
 
   overflow: hidden;
-
+  justify-self: stretch;
   line-height: 0;
 
   @include vp-1150 {
@@ -92,8 +92,9 @@
 
   @include vp-1150 {
     width: 683px;
+    height: 455px;
+    justify-self: start;
   }
-  justify-self: stretch;
 }
 
 .production__youtube-video {

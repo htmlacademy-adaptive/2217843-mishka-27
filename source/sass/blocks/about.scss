@@ -6,7 +6,7 @@
   }
 
   @include vp-1150 {
-    padding: 68px 242px 90px 225px;
+    padding: 67px 242px 90px 225px;
   }
 }
 
@@ -25,7 +25,7 @@
   }
 
   @include vp-1150 {
-    margin-bottom: 39px;
+    margin-bottom: 40px;
 
     font-size: 53px;
     line-height: 57px;
@@ -34,7 +34,6 @@
 
 .about__list {
   display: grid;
-  align-items: end;
   margin: 0;
   padding: 0;
 
@@ -42,15 +41,12 @@
   font-weight: 700;
   line-height: 20px;
 
-  grid-template-rows: 93px 123px 123px 123px 122px 124px;
-
   @include vp-768 {
     font-size: 20px;
     line-height: 22px;
     column-gap: 100px;
 
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: 100px 154px 155px;
   }
 
   @include vp-1150 {
@@ -62,65 +58,71 @@
   background-repeat: no-repeat;
 
   &--ecology {
-    padding-top: 54px;
+    padding: 54px 0 30px 0;
 
     background-image: url("../img/svg/ecology.svg");
     background-position-x: 8px;
 
     @include vp-768 {
-      padding-top: 56px;
+      padding: 56px 0 56px 0;
     }
   }
 
   &--price {
-    padding-top: 53px;
+    padding: 53px 0 35px 0;
 
     background-image: url("../img/svg/price.svg");
 
     @include vp-768 {
+      padding: 53px 0 58px 0;
+
       grid-column: 1;
     }
   }
 
   &--like {
-    padding-top: 48px;
+    padding: 48px 0 32px 0;
 
     background-image: url("../img/svg/like.svg");
     background-position-x: 7px;
 
     @include vp-768 {
+      padding: 52px 0 0 0;
+
+      background-position-y: 2px;
+
       grid-column: 1;
     }
   }
 
   &--handmade {
-    padding-top: 51px;
+    padding: 51px 0 33px 0;
 
     background-image: url("../img/svg/handmade.svg");
     background-position-x: 3px;
 
     @include vp-768 {
-      padding-top: 53px;
+      padding: 57px 0 56px 0;
+
+      background-position-y: 4px;
 
       grid-column: 2;
       grid-row: 1;
-    }
-
-    @include vp-1150 {
-      padding-top: 52px;
     }
   }
 
   &--local {
     position: relative;
 
-    padding-top: 49px;
+    padding: 49px 0 32px 0;
 
     background-image: url("../img/svg/local.svg");
     background-position-x: -6px;
 
     @include vp-768 {
-      padding-top: 51px;
+      padding: 54px 0 58px 0;
+
+      background-position-y: 2px;
 
       grid-column: 2;
       grid-row: 2;
@@ -137,6 +139,10 @@
     height: 6px;
 
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_44_95)'%3E%3Crect x='-24' y='-1979' width='320' height='3932' fill='white'/%3E%3Cpath d='M40.9467 5.75002C37.307 4.75864 33.0607 4.06466 28.41 4.06466C25.478 4.06466 22.8493 4.26294 20.625 4.65949L13.75 0H0.10114L5.9651 6.14656H14.4577C9.80697 7.73277 7.58272 9.61639 7.58272 9.61639V13.3836C7.58272 13.3836 9.90811 15.2672 14.5588 16.8534H5.86396L0 23H13.6489L20.5239 18.3405C22.8492 18.7371 25.3768 18.9354 28.3088 18.9354C32.8584 18.9354 37.1048 18.2414 40.8456 17.25C39.6324 15.4655 38.9246 13.5819 38.9246 11.4009C39.0257 9.4181 39.8345 7.5345 40.9467 5.75002Z' fill='%2363D1BB'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_44_95'%3E%3Crect width='320' height='3932' fill='white' transform='translate(-24 -1979)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+    @include vp-768 {
+      top: 2px;
+    }
   }
 
   &--local::after {
@@ -149,6 +155,10 @@
     height: 6px;
 
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_44_95)'%3E%3Crect x='-24' y='-1996' width='320' height='3932' fill='white'/%3E%3Cpath d='M40.9467 -11.25C37.307 -12.2414 33.0607 -12.9353 28.41 -12.9353C25.478 -12.9353 22.8493 -12.7371 20.625 -12.3405L13.75 -17H0.10114L5.9651 -10.8534H14.4577C9.80697 -9.26723 7.58272 -7.38361 7.58272 -7.38361V-3.61639C7.58272 -3.61639 9.90811 -1.73277 14.5588 -0.146561H5.86396L0 6H13.6489L20.5239 1.34051C22.8492 1.73706 25.3768 1.93537 28.3088 1.93537C32.8584 1.93537 37.1048 1.24139 40.8456 0.250015C39.6324 -1.53447 38.9246 -3.41811 38.9246 -5.59914C39.0257 -7.5819 39.8345 -9.4655 40.9467 -11.25Z' fill='%2363D1BB'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_44_95'%3E%3Crect width='320' height='3932' fill='white' transform='translate(-24 -1996)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+    @include vp-768 {
+      top: 19px;
+    }
   }
 
   &--gift {
