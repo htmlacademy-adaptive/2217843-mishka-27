@@ -3,7 +3,7 @@
   padding: 38px 0 39px 0;
 
   @include vp-768 {
-    padding: 66px 0 54px 0;
+    padding: 66px 0 56px 0;
 
     background-image: url("../img/svg/flag.svg");
     background-repeat: no-repeat;
@@ -157,7 +157,7 @@
   @include vp-768 {
     min-width: 768px;
     height: 457px;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   @include vp-1150 {
