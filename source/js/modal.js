@@ -1,25 +1,31 @@
-let modalContainer = document.querySelector('.modal__container');
-let buttonDailyProduct = document.querySelector('.daily-product__button');
-let buttonProductCardList = document.querySelectorAll('.product-card__button');
+const modalContainer = document.querySelector(".modal__container");
 
-if (modalContainer && buttonDailyProduct) {
-    buttonDailyProduct.addEventListener('click', function () {
-        modalContainer.classList.add('modal__container--is-open');
-    });
+const openModal = () => {
+  modalContainer.classList.add("modal__container--is-open");
+  document.addEventListener("keydown", onDocumentKeydown);
+  modalContainer.addEventListener("click", onModalClick);
 }
 
-if (modalContainer && buttonProductCardList) {
-    buttonProductCardList.forEach((button) =>
-        button.addEventListener('click', function () {
-            modalContainer.classList.add('modal__container--is-open');
-        }
-    ));
+const closeModal = () => {
+  modalContainer.classList.remove("modal__container--is-open");
+  document.removeEventListener("keydown", onDocumentKeydown);
+  modalContainer.removeEventListener("click", onModalClick);
 }
 
-if (modalContainer) {
-    modalContainer.addEventListener('click', function (event) {
-        if (event.target.closest('.modal'))
-            return;
-        modalContainer.classList.remove('modal__container--is-open');
-    });
-}
+document.addEventListener('click', (evt) => {
+  if (evt.target.closest('.product-card__button') || evt.target.closest('.daily-product__button')) {
+    openModal();
+  }
+});
+
+const onDocumentKeydown = (evt) => {
+  if(evt.key === 'Escape') {
+    closeModal();
+  }
+};
+
+const onModalClick = (evt) => {
+  if(!evt.target.closest('.modal')) {
+    closeModal();
+  }
+};
