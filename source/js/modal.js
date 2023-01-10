@@ -1,31 +1,34 @@
-const modalContainer = document.querySelector(".modal__container");
+const modal = document.querySelector(".modal");
 
 const openModal = () => {
-  modalContainer.classList.add("modal__container--is-open");
+  modal.classList.add("modal--is-open");
   document.addEventListener("keydown", onDocumentKeydown);
-  modalContainer.addEventListener("click", onModalClick);
-}
+  modal.addEventListener("click", onModalClick);
+};
 
 const closeModal = () => {
-  modalContainer.classList.remove("modal__container--is-open");
+  modal.classList.remove("modal--is-open");
   document.removeEventListener("keydown", onDocumentKeydown);
-  modalContainer.removeEventListener("click", onModalClick);
-}
+  modal.removeEventListener("click", onModalClick);
+};
 
-document.addEventListener('click', (evt) => {
-  if (evt.target.closest('.product-card__button') || evt.target.closest('.daily-product__button')) {
+document.addEventListener("click", (evt) => {
+  if (
+    evt.target.closest(".product-card__button") ||
+    evt.target.closest(".daily-product__button")
+  ) {
     openModal();
   }
 });
 
 const onDocumentKeydown = (evt) => {
-  if(evt.key === 'Escape') {
+  if (evt.key === "Escape") {
     closeModal();
   }
 };
 
 const onModalClick = (evt) => {
-  if(!evt.target.closest('.modal')) {
+  if (!evt.target.closest(".modal__container")) {
     closeModal();
   }
 };

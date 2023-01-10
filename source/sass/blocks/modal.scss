@@ -1,4 +1,4 @@
-.modal__container {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@
   }
 }
 
-.modal {
+.modal__container {
   width: 100%;
   max-width: 566px;
   margin: auto;

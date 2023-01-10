@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="img/background/hero-mobile@2x.png" as="image">
 </head>
 
 <body>
@@ -21,9 +20,9 @@
       <nav class="main-header__nav">
         <span class="main-header__logo main-header__logo--index">
           <picture>
-            <source media="(min-width: 1150px)" srcset="img/svg/logo-desktop.svg" width="149" height="72">
-            <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" width="114" height="46">
-            <img src="img/svg/logo-mobile.svg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
+            <source media="(min-width: 1150px)" srcset="img/icons/logo-desktop.svg" width="149" height="72">
+            <source media="(min-width: 768px)" srcset="img/icons//logo-tablet.svg" width="114" height="46">
+            <img src="img/icons/logo-mobile.svg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
           </picture>
         </span>
         <button class="main-header__button" type="button">
@@ -40,9 +39,9 @@
           </ul>
           <ul class="main-header__user-nav">
             <li class="main-header__user-item main-header__user-item--search">
-              <a class="main-header__user-link main-header__user-link--search" href="#">
+              <a class="main-header__user-link main-header__user-link--search" aria-label="Поиск по сайту." href="#">
                 <svg class="main-header__user-icon" width="18" height="18" aria-hidden="true" focusable="false">
-                  <use href="img/sprite.svg#icon-search"></use>
+                  <use href="img/sprite/sprite.svg#icon-search"></use>
                 </svg>
                 <span class="main-header__user-text main-header__user-text--search">Поиск по сайту</span>
               </a>
@@ -50,7 +49,7 @@
             <li class="main-header__user-item main-header__user-item--cart">
               <a class="main-header__user-link main-header__user-link--cart" href="#">
                 <svg class="main-header__user-icon main-header__user-icon--cart" width="21" height="18" aria-hidden="true" focusable="false">
-                  <use href="img/sprite.svg#icon-cart"></use>
+                  <use href="img/sprite/sprite.svg#icon-cart"></use>
                 </svg>
                 <span class="main-header__user-text">Корзина: пока пуста</span>
               </a>
@@ -74,18 +73,18 @@
 
       <section class="hero">
         <div class="hero__container container">
-          <h2 class="hero__title">Милые штуки <br>ручной<br> работы для дома</h2>
+          <h2 class="hero__title"><span>Милые штуки </span><br><span>ручной </span><br><span>работы для дома</span></h2>
           <div class="hero__list">
             <a class="hero__link" href="#">
               <span class="hero__text">Предметы<br> интерьера</span>
               <svg class="hero__icon" width="40" height="62" aria-hidden="true" focusable="false">
-                <use href="img/sprite.svg#icon-interior"></use>
+                <use href="img/sprite/sprite.svg#icon-interior"></use>
               </svg>
             </a>
             <a class="hero__link hero__link--toys" href="#">
               <span class="hero__text">Детские<br> игрушки</span>
               <svg class="hero__icon hero__icon--toys" width="60" height="60" aria-hidden="true" focusable="false">
-                <use href="img/sprite.svg#icon-toys"></use>
+                <use href="img/sprite/sprite.svg#icon-toys"></use>
               </svg>
             </a>
           </div>
@@ -95,10 +94,10 @@
       <section class="daily-product container zigzag">
         <h2 class="daily-product__title">
           <span class="daily-product__title-text">Вязаные корзинки</span>
-          <span class="daily-product__promo-text">Товар<br> недели</span>
+          <span class="daily-product__promo-text"><span>Товар </span><br>недели</span>
         </h2>
         <div class="daily-product__description">
-          <p class="daily-product__text-description">Экологически чистая пряжа,<br> ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+          <p class="daily-product__text-description"><span>Экологически чистая пряжа, </span><br><span>ручная работа. Доступны в шести расцветках и трёх размерах.</span></p>
           <dl class="daily-product__list">
             <div class="daily-product__item">
               <dt class="daily-product__name">Цвет:</dt>
@@ -131,12 +130,12 @@
       <section class="about container">
         <h2 class="about__title">Коротко о нас:</h2>
         <ul class="about__list">
-          <li class="about__item about__item--ecology">Экологически<br> чистые материалы</li>
-          <li class="about__item about__item--price">Скандинавский стиль<br> по российской цене</li>
-          <li class="about__item about__item--like">Увеличивает лайки<br> на фотографиях</li>
-          <li class="about__item about__item--handmade">Связано вручную<br> с любовью и умилением</li>
-          <li class="about__item about__item--local">Поддержка отечественного производителя</li>
-          <li class="about__item about__item--gift">Поставляется<br> в подарочной упаковке</li>
+          <li class="about__item about__item--ecology"><span>Экологически </span><br><span>чистые материалы</span></li>
+          <li class="about__item about__item--price"><span>Скандинавский стиль </span><br><span>по российской цене</span></li>
+          <li class="about__item about__item--like"><span>Увеличивает лайки </span><br><span>на фотографиях</span></li>
+          <li class="about__item about__item--handmade"><span>Связано вручную </span><br><span>с любовью и умилением</span></li>
+          <li class="about__item about__item--local"><span>Поддержка отечественного </span><br><span>производителя</span></li>
+          <li class="about__item about__item--gift"><span>Поставляется </span><br><span>в подарочной упаковке</span></li>
         </ul>
       </section>
 
@@ -145,24 +144,24 @@
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__list">
             <blockquote class="reviews__item">
-              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как<br> у популярных инстамамочек.<br> В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br> и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <p class="reviews__text"><span>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как </span><br><span>у популярных инстамамочек. </span><br><span>В отчаянии, я накупила аксессуаров и игрушек в Мишке, </span><br><span>и мои фотографии сразу стали более стильными, а также набирают больше лайков!</span></p>
               <div class="reviews__author-info">
                 <span class="reviews__author-name">Анастасия Красильникова</span>
                 <cite class="reviews__author-contacts">@misssssiskras</cite>
               </div>
             </blockquote>
           </div>
-          <div class="reveiws__buttons-wrapper">
+          <div class="reviews__buttons-wrapper">
             <button class="reviews__button reviews__button--previous" type="button">
               <span class="visually-hidden">Предыдущий отзыв.</span>
               <svg width="50" height="26" aria-hidden="true" focusable="false">
-                <use href="img/sprite.svg#arrow-previous"></use>
+                <use href="img/sprite/sprite.svg#arrow-previous"></use>
               </svg>
             </button>
             <button class="reviews__button reviews__button--next" type="button">
               <span class="visually-hidden">Следующий отзыв.</span>
               <svg width="50" height="26" aria-hidden="true" focusable="false">
-                <use href="img/sprite.svg#arrow-next"></use>
+                <use href="img/sprite/sprite.svg#arrow-next"></use>
               </svg>
             </button>
           </div>
@@ -176,7 +175,7 @@
           <h3 class="contacts__subtitle">e-mail:</h3>
           <a class="contacts__text contacts__text--email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           <h3 class="contacts__subtitle">адрес:</h3>
-          <p class="contacts__text">г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис 101</p>
+          <p class="contacts__text"><span>г. Санкт-Петербург </span><br><span>ул. Большая Конюшенная </span><br><span>д. 19/8, офис 101</span></p>
         </div>
         <div class="contacts__map">
           <picture>
@@ -205,7 +204,7 @@
       <div class="main-footer__container container">
         <a class="main-footer__logo" href="#">
           <svg class="main-footer__logo-image" width="102" height="34" aria-hidden="true" focusable="false">
-            <use href="img/sprite.svg#footer-logo"></use>
+            <use href="img/sprite/sprite.svg#footer-logo"></use>
           </svg>
           <span class="visually-hidden">Переход на главную страницу интернет-магазина Мишка.</span>
         </a>
@@ -214,44 +213,44 @@
             <li class="social__item social__item--vkontakte">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
                 <svg class="social__icon" width="27" height="18" aria-hidden="true" focusable="false">
-                  <use href="img/sprite.svg#icon-vkontakte"></use>
+                  <use href="img/sprite/sprite.svg#icon-vkontakte"></use>
                 </svg>
-                <span class="visually-hidden">ВКонтакте.</span>
+                <span class="visually-hidden">Переход на страницу HTML Academy ВКонтакте.</span>
               </a>
             </li>
             <li class="social__item social__item--youtube">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <svg class="social__icon" width="24" height="20" aria-hidden="true" focusable="false">
-                  <use href="img/sprite.svg#icon-youtube"></use>
+                  <use href="img/sprite/sprite.svg#icon-youtube"></use>
                 </svg>
-                <span class="visually-hidden">YouTube.</span>
+                <span class="visually-hidden">Переход на YouTube-канал HTML Academy.</span>
               </a>
             </li>
             <li class="social__item social__item--telegram">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                 <svg class="social__icon" width="20" height="18" aria-hidden="true" focusable="false">
-                  <use href="img/sprite.svg#icon-telegram"></use>
+                  <use href="img/sprite/sprite.svg#icon-telegram"></use>
                 </svg>
-                <span class="visually-hidden">Telegram.</span>
+                <span class="visually-hidden">Переход на канал HTML Academy в Telegram.</span>
               </a>
             </li>
           </ul>
         </div>
         <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive/">Разработано
           <svg class="main-footer__copyright-svg" width="27" height="35" aria-hidden="true" focusable="false">
-            <use href="img/sprite.svg#copyright-logo"></use>
+            <use href="img/sprite/sprite.svg#copyright-logo"></use>
           </svg>
-          <span class="visually-hidden">Переход на страницу HTML Academy.</span>
+          <span class="visually-hidden">Переход на страницу онлайн-курса от HTML Academy.</span>
         </a>
       </div>
     </footer>
   </div>
 
-  <div class="modal__container">
-    <div class="modal">
+  <div class="modal">
+    <div class="modal__container">
       <section class="modal__content">
         <h2 class="visually-hidden">Выбор размера товара.</h2>
-        <p class="modal__title-text">Добавить<br> в корзину</p>
+        <p class="modal__title-text"><span>Добавить </span><br><span>в корзину</span></p>
         <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
           <p class="modal__form-text">Выберите размер:</p>
           <ul class="modal__list">
@@ -274,7 +273,7 @@
     </div>
   </div>
 
-<script src="./js/menu.js"></script>
-<script src="./js/modal.js"></script>
+<script src="./js/menu.min.js"></script>
+<script src="./js/modal.min.js"></script>
 </body>
 </html>
