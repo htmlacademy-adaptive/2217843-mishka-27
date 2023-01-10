@@ -78,7 +78,7 @@
   height: 20px;
 
   background-color: $color-transparent;
-  background-image: url("../img/svg/hamburger.svg");
+  background-image: url("../img/icons/hamburger.svg");
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -91,9 +91,9 @@
     display: none;
   }
 
-  &--is-open {
+  &--open {
     top: 29px;
-    background-image: url("../img/svg/cross.svg");
+    background-image: url("../img/icons/cross.svg");
   }
 
   &:hover {
@@ -130,7 +130,7 @@
     display: grid;
   }
 
-  &--nav-is-open {
+  &--open {
     display: grid;
 
     @include vp-767 {
@@ -297,12 +297,16 @@
 
   @include vp-768 {
     &--search {
-      padding: 36px 31px 28px 33px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       border-right: 1px solid $color-whisper;
 
       border-left: 1px solid $color-whisper;
       min-height: 89px;
+      min-width: 84px;
     }
 
     &--cart {
@@ -313,11 +317,6 @@
   }
 
   @include vp-1150 {
-    &--search {
-      padding-right: 32px;
-    }
-
-
     &--cart {
       padding-right: 2px;
     }
@@ -335,7 +334,8 @@
 
   &--search {
     @include vp-768 {
-      padding-left: 18px;
+      min-width: 40px;
+      min-height: 40px;
     }
   }
 
@@ -357,13 +357,15 @@
   fill: rgba($color-default-black, 20%);
 
   @include vp-768 {
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &--cart {
     top: 2px;
     left: 0;
+    transform: none;
 
     width: 21px;
 

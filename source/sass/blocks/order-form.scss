@@ -400,7 +400,6 @@
 
     &--first {
       padding: 18px 0 12px 81px;
-      //margin-right: 13px;
     }
 
     &--second,
@@ -412,33 +411,24 @@
 
 .order-form__control-mark {
   position: absolute;
-  top: 50%;
+  top: -10px;
   left: 0;
 
   width: 38px;
   height: 38px;
 
   border: 2px solid $color-charcoal;
-  transform: translateY(-50%);
 
   @include vp-768 {
     width: 52px;
     height: 52px;
-  }
-
-  &:hover {
-    border-color: $color-downy-tertiary;
-  }
-
-  &:active {
-    border-color: rgba($color-charcoal, 30%);
+    top: -2px;
   }
 }
 
 .order-form__control-mark--radio {
   left: -1px;
-  top: 47%;
-
+  top: -5px;
   width: 40px;
   height: 40px;
 
@@ -448,10 +438,15 @@
     width: 50px;
     height: 50px;
     left: 0;
+    top: -17px;
   }
+}
 
-  &:active {
-    border-color: rgba($color-default-black, 30%);
+.order-form__control-mark--toys {
+  top: -12px;
+
+  @include vp-768 {
+    top: -17px;
   }
 }
 
@@ -483,14 +478,14 @@
   width: 24px;
   height: 17px;
 
-  background-image: url("../img/svg/tick-small.svg");
+  background-image: url("../img/icons/tick-small.svg");
   transform: translateX(-50%) translateY(50%);
 
   @include vp-768 {
     width: 33px;
     height: 22px;
 
-    background-image: url("../img/svg/tick-large.svg");
+    background-image: url("../img/icons/tick-large.svg");
   }
 }
 
@@ -531,6 +526,7 @@
   @include vp-768 {
     margin-right: 25px;
     padding: 20px 0 11px 0;
+    max-width: 150px;
 
     &--surname {
       margin-right: 26px;
@@ -555,6 +551,26 @@
       margin-right: 26px;
     }
   }
+}
+
+.order-form__control:hover > .order-form__control-mark {
+  border-color: $color-downy-tertiary;
+}
+
+.order-form__checkbox-control:hover > .order-form__control-mark {
+  border-color: $color-downy-tertiary;
+}
+
+.order-form__control-input:focus + .order-form__control-mark {
+  border-color: $color-downy-tertiary;
+}
+
+.order-form__control:active > .order-form__control-mark {
+  border-color: rgba($color-charcoal, 30%);
+}
+
+.order-form__checkbox-control:active > .order-form__control-mark {
+  border-color: rgba($color-charcoal, 30%);
 }
 
 .order-form__field {
@@ -600,7 +616,7 @@
   &--tel {
     padding: 13px 10px 17px 0;
     background-position: top 9px right 7px;
-    background-image: url("../img/svg/phone.svg");
+    background-image: url("../img/icons/phone.svg");
     background-repeat: no-repeat;
 
     @include vp-768 {
@@ -617,7 +633,7 @@
   &--email {
     padding: 14px 10px 15px 0;
     background-position: top 13px right 3px;
-    background-image: url("../img/svg/mail.svg");
+    background-image: url("../img/icons/mail.svg");
     background-repeat: no-repeat;
 
     @include vp-768 {
@@ -656,11 +672,11 @@
 }
 
 .order-form__field--tel:placeholder-shown {
-  background-image: url("../img/svg/phone-placeholder.svg");
+  background-image: url("../img/icons/phone-placeholder.svg");
 }
 
 .order-form__field--email:placeholder-shown {
-  background-image: url("../img/svg/mail-placeholder.svg");
+  background-image: url("../img/icons/mail-placeholder.svg");
 }
 
 .order-form__textarea {
@@ -694,8 +710,20 @@
   }
 }
 
-.order-form__note {
+.order-form__footer {
+  @include vp-768 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 50px;
+    justify-content: space-between;
+  }
 
+  @include vp-1150 {
+    margin: 0 225px;
+  }
+}
+
+.order-form__note {
   margin: 0 0 30px 0;
 
   font-size: 14px;
@@ -703,20 +731,11 @@
   color: $color-charcoal;
 
   @include vp-768 {
-    position: absolute;
-    right: 50px;
-    bottom: 62px;
-    left: 416px;
-    margin: 0;
+    margin: 0 0 0 30px;
+    align-self: center;
 
     font-size: 17px;
     line-height: 30px;
-  }
-
-  @include vp-1150 {
-    right: 225px;
-    bottom: 59px;
-    left: 623px;
   }
 }
 
@@ -727,12 +746,9 @@
 
   @include vp-768 {
     width: 230px;
-    margin-left: 50px;
   }
 
   @include vp-1150 {
-    margin-left: 225px;
-
     line-height: 17px;
   }
 }
