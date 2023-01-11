@@ -573,6 +573,11 @@
   border-color: rgba($color-charcoal, 30%);
 }
 
+.order-form__control-input:disabled + .order-form__control-mark {
+  border-color: rgba($color-charcoal, 10%);
+  background-color: rgba($color-charcoal, 10%);
+}
+
 .order-form__field {
   flex-grow: 1;
   min-width: 260px;
